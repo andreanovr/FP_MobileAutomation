@@ -1,7 +1,6 @@
 package FP.stepDef;
 
 import FP.pages.loginPage;
-import FP.pages.selectUserPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
@@ -12,7 +11,7 @@ public class loginDef {
     }
 
     @And("user is on login page")
-    public void userIsOnSelectHomePage() {
+    public void userIsOnSelectHomePage() throws InterruptedException {
         loginPage.validateOnPage();
     }
 

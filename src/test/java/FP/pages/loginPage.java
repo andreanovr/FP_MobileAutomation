@@ -5,7 +5,8 @@ import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class loginPage extends baseTest {
-    public static void validateOnPage() {
+    public static void validateOnPage() throws InterruptedException{
+        Thread.sleep(10000);
         // Button Login
         wait.until(ExpectedConditions.presenceOfElementLocated(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.view.ViewGroup/android.widget.Button[1]")));
         // Field Email
