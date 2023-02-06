@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="116.856">
-    <testcase classname="Login" name="01 Login as a room tenant with valid credentials" time="51.119">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="407.057">
+    <testcase classname="Login" name="TC_086 - Login as a room tenant with valid credentials" time="53.533">
         <system-out><![CDATA[And user click profil menu..................................................passed
 And user is on login page...................................................passed
 And user input email with "andreanovr@gmail.com"............................passed
@@ -9,13 +9,69 @@ When user click on login button.............................................pass
 Then user is on homepage tenant after login.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Login" name="02 Login as a room owner with valid credentials" time="50.78">
+    <testcase classname="Login" name="TC_072 -  Login as a room owner with valid credentials" time="51.8">
         <system-out><![CDATA[And user click profil menu..................................................passed
 And user is on login page...................................................passed
 And user input email with "fachrulfatahillah3@gmail.com"....................passed
 And user input password with "example12345".................................passed
 When user click on login button.............................................passed
 Then user is on homepage owner after login..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Logout" name="TC_127 - Room Tenants - verify user can logout with click the Logout in pop-up &quot;do you want to exit ?&quot;" time="80.734">
+        <system-out><![CDATA[And user click profil menu..................................................passed
+And user is on login page...................................................passed
+And user input email with "andreanovr@gmail.com"............................passed
+And user input password with "andreanovr@gmail.com".........................passed
+And user click on login button..............................................passed
+And user is on homepage tenant after login..................................passed
+And user click profil menu..................................................passed
+And user is on profil page..................................................passed
+When user click logout button...............................................passed
+And user click logout on popup..............................................passed
+Then user is on homepage before login.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Logout" name="TC_123 - Room Owner - verify user can logout with click the Logout in pop-up &quot;do you want to exit ?&quot;" time="79.747">
+        <system-out><![CDATA[And user click profil menu..................................................passed
+And user is on login page...................................................passed
+And user input email with "fachrulfatahillah3@gmail.com"....................passed
+And user input password with "example12345".................................passed
+And user click on login button..............................................passed
+And user is on homepage owner after login...................................passed
+And user click profil menu..................................................passed
+And user is on profil page..................................................passed
+When user click logout button...............................................passed
+And user click logout on popup..............................................passed
+Then user is on homepage before login.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Logout" name="TC_128 - Room Tenants - verify user can logout with click the Cancel in pop-up &quot;do you want to exit ?&quot;" time="63.358">
+        <system-out><![CDATA[And user click profil menu..................................................passed
+And user is on login page...................................................passed
+And user input email with "andreanovr@gmail.com"............................passed
+And user input password with "andreanovr@gmail.com".........................passed
+And user click on login button..............................................passed
+And user is on homepage tenant after login..................................passed
+And user click profil menu..................................................passed
+And user is on profil page..................................................passed
+When user click logout button...............................................passed
+And user click cancel on popup..............................................passed
+Then user is on profil page.................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Logout" name="TC_124 - Room Owner - verify user can logout with click the Cancel in pop-up &quot;do you want to exit ?&quot;" time="61.557">
+        <system-out><![CDATA[And user click profil menu..................................................passed
+And user is on login page...................................................passed
+And user input email with "fachrulfatahillah3@gmail.com"....................passed
+And user input password with "example12345".................................passed
+And user click on login button..............................................passed
+And user is on homepage owner after login...................................passed
+And user click profil menu..................................................passed
+And user is on profil page..................................................passed
+When user click logout button...............................................passed
+And user click cancel on popup..............................................passed
+Then user is on profil page.................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

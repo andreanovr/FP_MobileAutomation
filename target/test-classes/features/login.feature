@@ -5,7 +5,7 @@ Feature: Login
     Given user is on homepage before login
 
   @positive-test @smoke
-  Scenario Outline: 01 Login as a room tenant with valid credentials
+  Scenario Outline: TC_086 - Login as a room tenant with valid credentials
     And user click profil menu
     And user is on login page
     And user input email with "<email>"
@@ -17,7 +17,7 @@ Feature: Login
       | andreanovr@gmail.com | andreanovr@gmail.com  |
 
   @positive-test @smoke
-  Scenario Outline: 02 Login as a room owner with valid credentials
+  Scenario Outline: TC_072 -  Login as a room owner with valid credentials
     And user click profil menu
     And user is on login page
     And user input email with "<email>"
